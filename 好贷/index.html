@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css1/index.css">
+</head>
+<body>
+<div class="box">
+    <h1>快速搜索消费情况</h1>
+    <p class="clearfix"><span>贷款金额:</span><i>不足一万可用小数表示</i></p>
+    <div class="money">
+        <ul class="ul1">
+            <li class="clearfix">
+                <div class="li-left">
+                    <input type="text" value="25" id="ipt1">
+                    <span id="scon">万元</span>
+                </div>
+
+                <div class="btn" id="btn"></div>
+                <ul id="ul1" class="btn-ul">
+                    <li><i>5</i><span>万元</span></li>
+                    <li><i>10</i><span>万元</span></li>
+                    <li><i>15</i><span>万元</span></li>
+                    <li><i>20</i><span>万元</span></li>
+                    <li><i>25</i><span>万元</span></li>
+                    <li><i>30</i><span>万元</span></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <p class="clearfix"><span>贷款期限:</span></p>
+    <div class="money">
+        <ul class="ul1">
+            <li class="clearfix">
+                <div class="li-left">
+                    <input type="text" value="25" id="ipt2">
+                    <span id="scon2">个月</span>
+                </div>
+
+                <div class="btn" id="btn2"></div>
+                <ul id="ul2" class="btn-ul">
+                    <li><i>5</i><span>个月</span></li>
+                    <li><i>1</i><span>年</span></li>
+                    <li><i>15</i><span>个月</span></li>
+                    <li><i>20</i><span>个月</span></li>
+                    <li><i>2</i><span>年</span></li>
+                    <li><i>12</i><span>个月</span></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="login"><a href="#">搜一下</a></div>
+    <div class="footer">9164中信贷产品 2000家银行 1403家小贷公司</div>
+</div>
+<script src="js/jquery-1.7.2.js"></script>
+<script>
+    function fnTab(aUl,aLi,ipt,son) {
+        $(aUl).click(function () {
+            $(this).css('background','url("img/bg2.png")no-repeat 0 0').next('ul').stop().slideToggle();
+        })
+        $(aLi).click(function () {
+            $(this).each(function () {
+                $(ipt).val($(this).find('i').html());
+                $(son).html($(this).find('span').html());
+                $('#ul1').css('display','none');
+                $('#ul2').css('display','none');
+                $(aUl).css('background','url("img/bg1.png")no-repeat 0 0')
+            })
+        })
+    }
+    fnTab('#btn','#ul1 li','#ipt1','#scon');
+    fnTab('#btn2','#ul2 li','#ipt2','#scon2');
+</script>
+</body>
+</html>

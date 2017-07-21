@@ -1,0 +1,88 @@
+.box{
+    width: 400px;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 20px 200px ;
+}
+.box h1{
+    color: white;
+    margin: 0;
+}
+.box p{font-size: 12px;color: white;}
+.clearfix:after{
+    display: block;
+    clear: both;
+    content: '';
+}
+.box p span{float: left;}
+.box p i{float: right;font-style: normal;}
+ul,li{list-style: none;}
+a{text-decoration: none;}
+.ul1{
+    padding: 0;
+}
+.ul1 li {
+    width: 100%;
+    position: relative;
+}
+.ul1 li .li-left{
+    width: 87%;
+    height: 43px;
+    float: left;
+    position: relative;
+}
+.ul1 li .li-left input{
+    width: 100%;font-size: 14px;padding:0 0 0 4px;
+    height: 43px;margin: 0;border: none;
+}
+.ul1 li .li-left span{
+    position: absolute;
+    top: 10px;right: 10px;
+    font-size: 14px;
+    color: #666;
+}
+.ul1 li .btn{
+    width: 45px;
+    float: left;
+    height: 43px;
+    background: url("../img/bg1.png")no-repeat 0 0;
+}
+.btn-ul{
+    padding: 0;
+    height: 180px;
+    background: white;
+    position: absolute;
+    top: 44px;left: 0;
+    width:98%;
+    display: none;z-index: 1;
+}
+.btn-ul li{
+    width: 98%;
+    padding-left: 2%;
+    height: 30px;
+    line-height: 30px;
+    border: white;
+}
+.btn-ul li:hover{
+    background: #0ba8ee;
+}
+.btn-ul li i{font-style: normal;}
+.login{
+    width: 98%;
+    margin-top: 30px;
+    background: #0ba8ee;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+}
+.login a{
+    display: block;
+    color: white;
+}
+.footer{
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 12px;
+    color: #f5f5f5;
+}
